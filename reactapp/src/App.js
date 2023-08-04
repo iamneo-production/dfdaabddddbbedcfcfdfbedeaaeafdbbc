@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { Banner } from './components/UI/Banner/Banner';
 import  Button from './components/UI/Button/Button';
 import './quizstyle.css'
@@ -57,7 +56,7 @@ const App = () => {
     const [score, setScore] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [showQuiz, setShowQuiz] = useState(false);
-    const [showStart, setShowStart] = useState(false);
+    const [setShowStart] = useState(false);
     const [questionsCorrect, setQuestionsCorrect] = useState(0);
 
   const handleResultsButton = () => {
