@@ -56,18 +56,18 @@ const App = () => {
     const [score, setScore] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [showQuiz, setShowQuiz] = useState(false);
-    const [setShowStart] = useState(false);
-    const [setQuestionsCorrect] = useState(0);
+    const [showStart, setShowStart] = useState(false);
+    const [questionsCorrect, setQuestionsCorrect] = useState(0);
 
   const handleResultsButton = () => {
-      if(currentQuestion === 5){
+      if(currentQuestion === Questionbank.length - 1){
         setShowStart(true);
       }
-  }  
+  };
     
    const handleQuizButton = () => {
         setShowQuiz(true);
-    }
+    };
 
 const handleAnswerResponse=(isCorrect)=>
 {
@@ -85,7 +85,7 @@ const handleAnswerResponse=(isCorrect)=>
    else{
     setShowScore(true);
    }
-}
+};
 const text = () => {
     const nextQuestion= currentQuestion+1;
     if(nextQuestion < Questionbank.length){
@@ -94,14 +94,14 @@ const text = () => {
      return "Start Quiz"
     }
       
-}
+};
 
 const resetQuiz=()=>
 {
     setCurrentQuestion(0);
     setScore(0);
     setShowScore(false);
-}
+};
 
     return (
         <div className='app'>
@@ -141,7 +141,9 @@ const resetQuiz=()=>
                         <div className='answer-section'>
                           {Questionbank[currentQuestion].Answers.map((answer)=>
                           (
-                              <button onClick={()=>handleAnswerResponse(answer.isCorrect)}>{answer.Answer}</button>
+                                <button onClick={()=>handleAnswerResponse(answer.isCorrect)}>
+                                {answer.Answer}
+                                </button>
                           ))}
                          <Button>{text()}
                           </Button>
