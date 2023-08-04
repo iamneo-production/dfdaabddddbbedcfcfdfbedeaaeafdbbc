@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Banner } from './components/UI/Banner/Banner';
 import  Button from './components/UI/Button/Button';
 import './quizstyle.css'
@@ -59,7 +59,11 @@ const App = () => {
     const [setShowStart] = useState(false);
     const [setQuestionsCorrect] = useState(0);
 
- 
+  const handleResultsButton = () => {
+      if(currentQuestion === 5){
+        setShowStart(true);
+      }
+  }  
     
    const handleQuizButton = () => {
         setShowQuiz(true);
