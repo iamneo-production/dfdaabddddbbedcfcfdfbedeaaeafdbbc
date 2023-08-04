@@ -1,5 +1,5 @@
 import React from 'react';
-import Stopwatch from './components/Stopwatch/Stopwatch';
+import Stopwatch from './components/UI/Stopwatch';
 
 
 import './App.css';
@@ -9,7 +9,7 @@ function App() {
     <div>
       <Stopwatch/>
       <a className="App-link"
-          href="http://10.40.2.32:8081"
+          href="http://10.40.2.32:8828"
           target="_blank"
           rel="noopener noreferrer">Learn React</a>
     </div>
