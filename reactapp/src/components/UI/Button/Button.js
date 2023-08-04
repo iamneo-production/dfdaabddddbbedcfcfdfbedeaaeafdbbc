@@ -1,18 +1,19 @@
-import React from "react";
-interface ButtonProps {
-    onClick: () => void;
-    text : String;
-}
+import React from 'react';
 
-const ButtonFunc = (text) => {
-    if(text === ""){
-        return "Button Works";
-    } else {
-        return text;
-    }
-}
-const Button = (ButtonProps) => {
-    return (<button onClick = {ButtonProps.onClick}>{ButtonProps.children}</button>);
-}
+const Button = ({ onClick, text }) => {
+    const ButtonFunc = (text) => {
+        if (text === "") {
+            return "Button Works";
+        } else {
+            return text;
+        }
+    };
+
+    return (
+        <button onClick={onClick}>
+            {ButtonFunc(text)}
+        </button>
+    );
+};
 
 export default Button;
