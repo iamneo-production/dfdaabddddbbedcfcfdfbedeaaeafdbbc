@@ -5,7 +5,7 @@ import  Button from './components/UI/Button/Button';
 import './quizstyle.css'
 
 const App = () => {
-    var Questionbank = [
+    let Questionbank = [
         {
             Question: "Who is the father of your nation ?",
             Answers: [
