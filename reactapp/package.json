@@ -38,7 +38,8 @@
   },
   "devDependencies": {
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-15": "^1.4.4",
-    "enzyme-adapter-react-16": "^1.15.7"
+    "enzyme-adapter-react-15": "^1.4.4"
   }
 }
+
+npm install @babel/plugin-proposal-private-property-in-object --save-dev
